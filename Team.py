@@ -22,6 +22,7 @@ class Team():
     def add_player(self, player_to_add: Player):
 
         self.players.append(player_to_add)
+        player_to_add.assign_team(self)
 
     def remove_player(self, player_to_remove: Player):
 
