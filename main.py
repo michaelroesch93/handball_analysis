@@ -7,8 +7,6 @@ team = Team("CVJM Walddorf")
 player1 = Player("Tom", "Gaiser", 14)
 player2 = Player("Noah", "Neuschler", 10)
 
-print(player1)
-
 team.add_player(player1)
 team.add_player(player2)
 

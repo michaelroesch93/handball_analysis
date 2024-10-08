@@ -1,3 +1,4 @@
+
 class Player():
 
     def __init__(self, first_name, last_name, number):
@@ -15,6 +16,10 @@ class Player():
 
         self.first_name = new_first_name
         self.last_name = new_last_name
+
+    def assign_team(self, team):
+
+        self.team = team
 
     
 
