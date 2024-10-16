@@ -42,7 +42,8 @@ def team_get():
         teams = []
         for row in request_data:
             teams.append({
-                "name": row[0],
+                "id": row[0],
+                "name": row[1],
             })
 
         return jsonify({"teams": teams}), 200

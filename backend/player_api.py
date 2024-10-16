@@ -44,8 +44,9 @@ def player_get():
         players = []
         for row in request_data:
             players.append({
-                "first_name": row[0],
-                "last_name": row[1]
+                "id": row[0],
+                "first_name": row[1],
+                "last_name": row[2]
             })
 
         return jsonify({"player": players}), 200
