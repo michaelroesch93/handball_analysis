@@ -1,19 +1,20 @@
 from flask import jsonify, request
 import sqlite3
+from config import *
 
-def player_api(request_handle):
+def player_api():
 
-    if request_handle.method == "POST":
+    if request.method == "POST":
 
-        return player_post(request_handle)    
+        return player_post()
 
-    elif request_handle.method == "GET":
+    elif request.method == "GET":
 
-        return player_get(request_handle)
+        return player_get()
 
-def player_post(request_handle):
+def player_post():
         
-    data = request_handle.get_json()
+    data = request.get_json()
 
     try:
 
@@ -46,7 +47,7 @@ def player_get():
                 "first_name": row[0],
                 "last_name": row[1]
             })
-            
+
         return jsonify({"player": players}), 200
 
     except Exception as e:
